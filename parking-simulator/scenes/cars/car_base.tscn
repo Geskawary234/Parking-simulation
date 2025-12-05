@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgh8tacumywbt"]
+
+[ext_resource type="Script" uid="uid://bgc4ddqtrptih" path="res://src/car.gd" id="1_acqo3"]
+[ext_resource type="Texture2D" uid="uid://7au21tkp5bln" path="res://assets/textures/car/car_body.png" id="2_ypgtj"]
+[ext_resource type="Texture2D" uid="uid://y6j0e6pexnpl" path="res://assets/textures/car/car_color.png" id="3_cfrdf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_auomo"]
+size = Vector2(50, 100)
+
+[node name="Car" type="Node2D"]
+script = ExtResource("1_acqo3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_auomo")
+
+[node name="CarBody" type="Sprite2D" parent="."]
+position = Vector2(1.4210855e-14, 0)
+rotation = 3.1415925
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ypgtj")
+
+[node name="CarColor" type="Sprite2D" parent="CarBody"]
+texture = ExtResource("3_cfrdf")

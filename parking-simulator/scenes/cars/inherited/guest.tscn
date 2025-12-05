@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnoofrn4nqt5g"]
+
+[ext_resource type="PackedScene" uid="uid://dgh8tacumywbt" path="res://scenes/cars/car_base.tscn" id="1_goo3g"]
+
+[node name="Guest" instance=ExtResource("1_goo3g")]
+priority = 3
+min_stay_time = 1800
+max_stay_time = 3600
+random_color = true

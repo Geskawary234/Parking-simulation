@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cexrj8ocecllb"]
+
+[ext_resource type="PackedScene" uid="uid://dgh8tacumywbt" path="res://scenes/cars/car_base.tscn" id="1_irq52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3s6v"]
+resource_local_to_scene = true
+size = Vector2(50, 100)
+
+[node name="Resident" instance=ExtResource("1_irq52")]
+priority = 2
+min_stay_time = 7200
+max_stay_time = 28800
+random_color = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_n3s6v")

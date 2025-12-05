@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bimhghgrqh5j7"]
+
+[ext_resource type="Script" uid="uid://ct4jykr8ras3c" path="res://src/place.gd" id="1_3f674"]
+[ext_resource type="Texture2D" uid="uid://dqk3aeabeplc1" path="res://assets/textures/parking_line.png" id="1_4xivq"]
+
+[node name="Place" type="Node2D"]
+script = ExtResource("1_3f674")
+
+[node name="ParkingLine" type="Sprite2D" parent="."]
+position = Vector2(-50, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_4xivq")
+
+[node name="ParkingLine2" type="Sprite2D" parent="."]
+position = Vector2(50, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_4xivq")

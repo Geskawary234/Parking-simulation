@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://8rfsr0hga0iy"]
+
+[ext_resource type="PackedScene" uid="uid://dgh8tacumywbt" path="res://scenes/cars/car_base.tscn" id="1_xub68"]
+[ext_resource type="Texture2D" uid="uid://l2dkb13o4vvv" path="res://assets/textures/car/35a259d786a63a2b.png" id="2_gjlpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qhgj"]
+resource_local_to_scene = true
+size = Vector2(50, 100)
+
+[node name="Disabled" instance=ExtResource("1_xub68")]
+priority = 1
+min_stay_time = 1800
+max_stay_time = 5400
+random_color = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_5qhgj")
+
+[node name="35a259d786a63a2b" type="Sprite2D" parent="." index="2"]
+position = Vector2(5, -0.83333325)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_gjlpr")

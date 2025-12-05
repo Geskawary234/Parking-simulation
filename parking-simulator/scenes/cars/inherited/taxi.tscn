@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdw08uyxegwuk"]
+
+[ext_resource type="PackedScene" uid="uid://dgh8tacumywbt" path="res://scenes/cars/car_base.tscn" id="1_o1l4n"]
+[ext_resource type="Texture2D" uid="uid://70a38d17sicb" path="res://assets/textures/car/taxi_top.png" id="2_da23d"]
+[ext_resource type="Texture2D" uid="uid://ch5iv381c7jy" path="res://assets/textures/car/taxi_top_color.png" id="3_nkycw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3twh"]
+resource_local_to_scene = true
+size = Vector2(50, 100)
+
+[node name="Taxi" instance=ExtResource("1_o1l4n")]
+priority = 4
+min_stay_time = 180
+max_stay_time = 600
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_l3twh")
+
+[node name="CarColor" parent="CarBody" index="0"]
+modulate = Color(1, 1, 0, 1)
+
+[node name="TaxiTopColor" type="Sprite2D" parent="." index="2"]
+modulate = Color(0.995, 1, 0.7, 1)
+position = Vector2(6.6666665, -0.8333333)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_nkycw")
+
+[node name="TaxiTop" type="Sprite2D" parent="TaxiTopColor" index="0"]
+texture = ExtResource("2_da23d")
