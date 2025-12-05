@@ -1,4 +1,4 @@
-# 📘 **README.md — Parking Simulator**
+# 📘 **Parking Simulator**
 
 ![screenshot](photo_2025-12-05_08-56-06.jpg)
 
